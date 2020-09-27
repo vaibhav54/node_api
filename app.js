@@ -1,10 +1,14 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const app = express();
-const userRoute = require('./routes/fruitsRoutes');
 
+const userRoute = require('./routes/fruitsRoutes');
+const districtRoute = require('./routes/districtRoute');
+
+const app = express();
 app.use(express.json());
+
 app.use('/fruit',userRoute);
+app.use('/district',districtRoute);
 
 app.get('/', (req,res)=>{
     res.send('hello');

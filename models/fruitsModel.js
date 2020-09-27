@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const fruitSchema =new mongoose.Schema({
+const fruitSchema = new mongoose.Schema({
     name: String,
     color:String,
     weight:Number,

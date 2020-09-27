@@ -1,4 +1,6 @@
+const fs = require('fs');
 const fruitModel = require("../models/fruitsModel");
+const placesJson = require("../assets/places.json");
 
 const create = (req,res, next)=>{
     const inputData = req.body;
@@ -14,5 +16,6 @@ const read = (req,res)=>{
         console.log(tempBody);
     })
 }
+
 
 module.exports = {create, read};
